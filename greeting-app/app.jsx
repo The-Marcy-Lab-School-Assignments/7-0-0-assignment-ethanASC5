@@ -4,6 +4,7 @@ import LanguageButtons from './components/LanguageButtons';
 import SizeButtons from './components/SizeButtons';
 
 const App = () => {
+  /** FEEDBACK: Your app is not showing any of these components. It is showing the default counter and typescript. */
   const [greeting, setGreeting] = useState('Good Morning');
   const [fontSize, setFontSize] = useState(16);
 
