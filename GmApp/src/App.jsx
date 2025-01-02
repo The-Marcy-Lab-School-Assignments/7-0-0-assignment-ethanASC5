@@ -41,7 +41,12 @@ import './App.css'
 function App() {
   const [fontSize, font] = useState(40);
   const [greeting, setGreeting] = useState("Good Morning");
-  const [language, setLanguage] = useState("English");
+  const [language, setLanguage] = useState("English"); // this is not needed
+
+  /*
+  you are not using the language varible anywhere, I see instead that you are using greeting to
+  hold the state of the current language that you want to display.
+  */
 
 
   const FontChange = (size) => {
@@ -49,7 +54,7 @@ function App() {
 
   }
   const Language = (newLanguage) => {
-    setLanguage(newLanguage);
+    setLanguage(newLanguage); // you can remove this an your app would still work as expected
 
     const greetings = {
       English: "Good Morning",
@@ -87,3 +92,19 @@ function App() {
 };
 
 export default App
+/*
+In order for you to gain full points you need to replicate what you did in
+greeting app:
+
+-create 3 diffrent componets: 
+  - languageButton
+  - greeting
+  - sizeButton
+- use destructuring to extract props for these componets 
+- ensuring that you use PascalCase with the componets above
+
+I removed these points as you no longer have these a sepreate componets but 
+you now display what is expacted with the correct funcinality.
+
+
+*/
